@@ -1,0 +1,18 @@
+name: Extended Test
+
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+
+jobs:
+  call-standard-test:
+    name: Test
+    uses: gobuffalo/.github/.github/workflows/go-test.yml@v1
+    secrets: inherit
+
+  call-extended-coverage:
+    needs: [ call-standard-test ]
+    name: Coverage
+    uses: gobuffalo/.github/.github/workflows/go-coverage.yml@v1
+    secrets: inherit

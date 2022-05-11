@@ -1,0 +1,11 @@
+{
+    "name": "Standard Go Test for Gobuffalo",
+    "description": "The test-only workflow for Go packages.",
+    "iconName": "go",
+    "categories": [
+        "Go"
+    ],
+    "filePatterns": [
+        "go.mod"
+    ]
+}

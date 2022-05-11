@@ -1,0 +1,11 @@
+{
+    "name": "Extended Go Test for Gobuffalo",
+    "description": "The extended testing workflow for Go packages. (standard test + test coverage)",
+    "iconName": "go",
+    "categories": [
+        "Go"
+    ],
+    "filePatterns": [
+        "go.mod"
+    ]
+}

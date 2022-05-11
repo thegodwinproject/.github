@@ -1,0 +1,39 @@
+name: Standard Go Coverage
+
+on:
+  workflow_call:
+    secrets:
+      CC_TEST_REPORTER_ID:
+        required: true
+
+jobs:
+  standard-go-coverage:
+    name: Test Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v3
+        with:
+          go-version: "1.17.x"
+
+      - name: Code Climate
+        uses: paambaati/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: go test -coverprofile=coverage.txt -covermode=atomic ./...
+          coverageLocations: coverage.txt:gocov
+          prefix: github.com/${{ github.repository }}
+
+      - name: Coveralls
+        uses: shogo82148/actions-goveralls@v1
+        with:
+          path-to-profile: coverage.txt
+
+      - name: Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          verbose: true
+          files: ./coverage.txt
