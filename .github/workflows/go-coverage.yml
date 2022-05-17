@@ -6,6 +6,9 @@ on:
       CC_TEST_REPORTER_ID:
         required: true
 
+permissions:
+  contents: read
+
 jobs:
   standard-go-coverage:
     name: Test Coverage
@@ -16,7 +19,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
-          go-version: "1.17.x"
+          go-version-file: "go.mod"
 
       - name: Code Climate
         uses: paambaati/codeclimate-action@v3.0.0
