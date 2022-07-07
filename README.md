@@ -19,8 +19,8 @@ The Standard Go Test, `go-test.yml`, will run configured `go test` command
 for the caller package on pre-configured environments.
 Currently, the test will run on the latest version of Ubuntu, macOS, and
 Windows OSes with supported go versions.
-The current supported go versions are 1.16 and 1.17. 1.18 support will be
-added soon. (1.16 support will be deprecated once 1.18 support is added.)
+The currently supported go versions are 1.17 and 1.18 as per the rule we
+support the last two versions.
 
 Additionally, it runs [Dependency Review Github Action](https://docs.github.com/en/code-security/supply-chain-security/understanding-your-software-supply-chain/about-dependency-review#dependency-review-enforcement)
 to check if any vulnerable versions of dependencies could be introduced by
