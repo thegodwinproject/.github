@@ -29,5 +29,6 @@ jobs:
           stale-pr-label: "stale"
           close-issue-label: "s: closed"
           close-pr-label: "s: closed"
-          exempt-issue-labels: "bug,security,s: triage,s: accepted,s: blocked,s: hold"
-          exempt-pr-labels: "bug,security,s: triage,s: accepted,s: blocked,s: hold"
+          exempt-issue-labels: "bug,security,s: accepted,s: blocked,s: hold"
+          exempt-pr-labels: "bug,security,s: accepted,s: blocked,s: hold"
+          exempt-all-milestones: true
