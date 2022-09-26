@@ -1,0 +1,33 @@
+name: "Close stale issues and PRs"
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write  # for actions/stale to close stale issues
+      pull-requests: write  # for actions/stale to close stale PRs
+
+    steps:
+      - uses: actions/stale@v6
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          days-before-issue-stale: 30
+          days-before-issue-close: 7
+          days-before-pr-stale: 45
+          days-before-pr-close: 7
+          stale-issue-message: "This issue is stale because it has been open 30 days with no activity. Remove stale label or comment. Otherwise, this will be closed in 7 days."
+          stale-pr-message: "This PR is stale because it has been open 45 days with no activity. Remove stale label or comment. Otherwise, this will be closed in 7 days."
+          close-issue-message: "This issue was closed because it has been stalled for 30+7 days with no activity."
+          close-pr-message: "This PR was closed because it has been stalled for 45+7 days with no activity."
+          stale-issue-label: "stale"
+          close-issue-label: "stale"
+          stale-pr-label: "autoclose"
+          close-pr-label: "autoclose"
+          exempt-issue-labels: "bug,security,s: triage,s: accepted,s: blocked,s: hold"
+          exempt-pr-labels: "bug,security,s: triage,s: accepted,s: blocked,s: hold"

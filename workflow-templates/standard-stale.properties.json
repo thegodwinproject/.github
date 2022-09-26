@@ -1,0 +1,8 @@
+{
+    "name": "Standard Autocloser for Gobuffalo",
+    "description": "Close stale issues and pull requests.",
+    "iconName": "trash",
+    "categories": [
+        "Automation"
+    ]
+}
