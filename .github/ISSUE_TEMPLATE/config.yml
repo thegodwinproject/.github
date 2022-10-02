@@ -1,0 +1,13 @@
+# https://help.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository#configuring-the-template-chooser
+#
+blank_issues_enabled: true
+contact_links:
+- name: Slack Channel
+  url: https://gophers.slack.com/messages/buffalo/
+  about: Chat with devs and community
+- name: StackOverflow
+  url: https://stackoverflow.com/questions/tagged/buffalo
+  about: Please ask typical Q&A here
+- name: Documentation
+  url: https://gobuffalo.io/documentation/
+  about: Documentation resources

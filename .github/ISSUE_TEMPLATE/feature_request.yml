@@ -1,0 +1,21 @@
+name: 🎯 Feature Request
+description: Suggest an idea for this project
+title: "feature: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hello! Thank you so much for your interest in Buffalo. The fact you care enough to be here, right now, helping, makes us very happy.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the problem you want to address with this new feature and the context related to this request will help us understand and proceed in the right direction.
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information

@@ -1,0 +1,61 @@
+name: 🐞 Bug Report
+description: Create a report to help us improve
+title: "bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Hello! Thank you so much for your interest in Buffalo. The fact you care enough to be here, right now, helping, makes us very happy.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened and what was your expectation instead
+      value: |
+        <!-- Please provide as much relevant info as possible. -->
+
+        #### Description
+
+        Describe your issue as detail as possible.
+
+        #### Expected Behavior
+
+        What did you want to happen? Tell us a story. We love to read.
+
+        ### Actual Behavior
+
+        What actually happended and what, exactly, is different than expected?
+
+    validations:
+      required: true
+      
+  - type: textarea
+    id: to-reproduce
+    attributes:
+      label: To Reproduce
+      description: Code or steps to reproduce the behavior.
+      placeholder: |
+        including
+        1. what was your installation method...
+        2. what was your exact command and arguments...
+        3. what you see...
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: |
+        Please provide any additional information such as logs, environment including OS version, screenshots,...
+      value: |
+        <!-- Additional Context Here -->
+
+        Details
+
+        <details>
+
+        ```
+        Paste the output of `buffalo info` here!
+        ```
+
+        </details>
