@@ -23,7 +23,7 @@ the last two version of the officially released Go versions.
 
 ## How to contribute
 
-1. Check Issues of the module (e.g.
+1. Check existing issues of the module (e.g.
    [https://github.com/gobuffalo/buffalo/issues](https://github.com/gobuffalo/buffalo/issues))
    to make sure you're not working on a duplicate issue or PR.
 2. If you want to implement a new feature that doesn't have an issue open,
@@ -33,11 +33,14 @@ the last two version of the officially released Go versions.
    from being accepted.
    The [#buffalo](https://gophers.slack.com/messages/buffalo/) channel on
    gophers.slack.com is a great place to seek this kind of guidance.
-3. Write your feature/fix and make sure to include tests. Tests are an
+3. Do not open a PR for supported go version update. The version management
+   (including supported go versions) is a responsibility of maintainers and
+   will be managed with complex consideration across all projects.
+4. Write your feature/fix and make sure to include tests. Tests are an
    **absolute** requirement for any pull request. Please make sure to use the
    same testing style and libraries as the rest of the tests.
-4. Make sure tests run when doing `go test -race ./...`.
-5. (Optional) There is a much longer set of integration tests that can be run.
+5. Make sure tests run when doing `go test -race ./...`.
+6. (Optional) There is a much longer set of integration tests that can be run.
    These will be run by github actions when you open a PR. If you want to run
    them locally, you can by running `docker build .`.
 
