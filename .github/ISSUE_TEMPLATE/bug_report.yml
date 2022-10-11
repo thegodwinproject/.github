@@ -17,15 +17,15 @@ body:
 
         #### Description
 
-        Describe your issue as detail as possible.
+        <!-- Describe your issue as detail as possible. -->
 
         #### Expected Behavior
 
-        What did you want to happen? Tell us a story. We love to read.
+        <!-- What did you want to happen? Tell us a story. We love to read. -->
 
-        ### Actual Behavior
+        #### Actual Behavior
 
-        What actually happended and what, exactly, is different than expected?
+        <!-- What actually happended and what, exactly, is different than expected? -->
 
     validations:
       required: true
