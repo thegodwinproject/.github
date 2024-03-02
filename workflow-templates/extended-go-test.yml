@@ -14,5 +14,5 @@ jobs:
   call-extended-coverage:
     needs: [ call-standard-test ]
     name: Coverage
-    uses: thegodwinproject/.github/.github/workflows/go-coverage.yml@v1
+    uses: thegodwinproject/.github/.github/workflows/go-coverage.yml@v1.1
     secrets: inherit
